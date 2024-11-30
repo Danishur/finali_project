@@ -1,125 +1,123 @@
-body {
-     font-family: Arial, sans-serif;
-     margin: 20px;
-     line-height: 1.6;
-   }
- 
-   h1 {
-     color: #333;
-   }
-   
-   form {
-     max-width: 600px;
-     margin: 20px auto;
-   }
-   
-   form input, form textarea, form button {
-     width: 100%;
-     margin-bottom: 10px;
-     padding: 8px;
-   }
-   
-   /* form button {
-     background-color: #333;
-     color: #fff;
-     border: none;
-     cursor: pointer;
-   } */
- 
- form button {
-     --color: #333;
-     font-family: inherit;
-     display: inline-block;
-     width: 8em;
-     height: 2.6em;
-     line-height: 2.5em;
-     margin: 20px;
-     position: relative;
-     cursor: pointer;
-     overflow: hidden;
-     border: 2px solid var(--color);
-     transition: color 0.5s;
-     z-index: 1;
-     font-size: 17px;
-     border-radius: 6px;
-     font-weight: 500;
-     color: var(--color);
-   }
-   
-   form button:before {
-     content: "";
-     position: absolute;
-     z-index: -1;
-     background: var(--color);
-     height: 150px;
-     width: 200px;
-     border-radius: 50%;
-   }
-   
-   form button:hover {
-     color: #fff;
-   }
-   
-   form button:before {
-     top: 100%;
-     left: 100%;
-     transition: all 0.7s;
-   }
-   
-   form button:hover:before {
-     top: -30px;
-     left: -30px;
-   }
-   
-   form button:active:before {
-     background: #333;
-     transition: background 0s;
-   }
-   
-   
-   ul {
-     list-style: none;
+/* Reset some basic styling */
+* {
+     margin: 0;
      padding: 0;
+     box-sizing: border-box;
    }
    
-   ul li {
-     margin-bottom: 10px;
+   /* General Layout */
+   body {
+     font-family: 'Arial', sans-serif;
+     background-color: #f1f5f8; /* Light gray background for the whole page */
+     color: #333;
+     line-height: 1.6;
+     padding: 40px 20px;
    }
    
+   /* Header Styling */
+   header {
+     text-align: center;
+     margin-bottom: 40px;
+   }
+   
+   h1 {
+     font-size: 3em;
+     color: #00bcd4; /* Bright Cyan */
+     font-weight: bold;
+   }
+   
+   /* Links and Navigation */
    a {
-     color: #0066cc;
+     color: #00bcd4; /* Bright Cyan */
      text-decoration: none;
+     font-size: 1.2em;
+     margin: 10px 0;
+     display: inline-block;
+     transition: color 0.3s ease;
    }
    
    a:hover {
-     text-decoration: underline;
+     color: #ff5722; /* Bright Orange on hover */
    }
- 
+   
+   /* Table Styling */
    table {
      width: 100%;
+     margin-top: 30px;
      border-collapse: collapse;
-     margin: 20px 0;
-     font-size: 18px;
-     text-align: left;
+     background-color: #fff;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
    }
- 
+   
+   thead {
+     background-color: #00bcd4; /* Bright Cyan */
+     color: #fff;
+   }
+   
    th, td {
      padding: 12px;
-     border: 1px solid #ddd;
+     text-align: left;
    }
- 
-   th {
-     background-color: #f4f4f4;
-     font-weight: bold;
-   }
- 
+   
    tr:nth-child(even) {
-     background-color: #f9f9f9;
+     background-color: #f7f7f7;
    }
- 
+   
    tr:hover {
-     background-color: #f1f1f1;
+     background-color: #e1f5fe; /* Light Cyan */
    }
- 
- 
+   
+   /* Button Styling */
+   button {
+     padding: 12px 20px;
+     background-color: #00bcd4; /* Bright Cyan */
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 1em;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+   
+   button:hover {
+     background-color: #ff5722; /* Bright Orange */
+     transform: translateY(-3px);
+   }
+   
+   button:active {
+     background-color: #ff3d00; /* Darker Orange */
+     transform: translateY(0);
+   }
+   
+   /* Footer */
+   footer {
+     text-align: center;
+     margin-top: 40px;
+     font-size: 1.2em;
+     color: #555;
+   }
+   
+   /* Responsive Design */
+   @media screen and (max-width: 768px) {
+     body {
+       padding: 20px;
+     }
+   
+     header h1 {
+       font-size: 2.5em;
+     }
+   
+     table {
+       font-size: 0.9em;
+     }
+   
+     a {
+       font-size: 1em;
+     }
+   
+     button {
+       font-size: 1em;
+     }
+   }
    

@@ -1,44 +1,100 @@
-body {
-     font-family: Arial, sans-serif;
-     margin: 20px;
-     background-color: #f9f9f9;
+/* Reset some basic styling */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   /* General Layout */
+   body {
+     font-family: 'Arial', sans-serif;
+     background-color: #f4f6f9;
      color: #333;
+     line-height: 1.6;
+     padding: 40px 20px;
    }
    
    h1 {
-     font-size: 2em;
-     color: #2c3e50;
-     margin-bottom: 20px;
-   }
-   
-   ul {
-     list-style-type: none;
-     padding: 0;
-   }
-   
-   li {
-     margin-bottom: 10px;
-     padding: 10px;
-     background-color: #ffffff;
-     border: 1px solid #ddd;
-     border-radius: 5px;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   }
-   
-   li a {
-     text-decoration: none;
-     color: #2980b9;
+     font-size: 3em;
+     color: #00bcd4; /* Bright Cyan */
+     text-align: center;
+     margin-bottom: 40px;
      font-weight: bold;
-     font-size: 1.1em;
    }
    
-   li a:hover {
-     color: #1abc9c;
+   /* Form styling */
+   form {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 30px;
+     background-color: #ffffff;
+     border-radius: 8px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
    }
    
-   li em {
-     font-size: 0.9em;
-     color: #7f8c8d;
-     margin-left: 10px;
+   input, textarea {
+     width: 100%;
+     padding: 15px;
+     margin: 10px 0 20px 0;
+     border: 2px solid #00bcd4;
+     border-radius: 8px;
+     font-size: 1em;
+     background-color: #fafafa;
+     color: #333;
+     transition: border 0.3s ease, background-color 0.3s ease;
+   }
+   
+   /* Input and Textarea Focus */
+   input:focus, textarea:focus {
+     border-color: #ff5722; /* Bright Orange */
+     background-color: #fff3e0; /* Light Orange */
+     outline: none;
+   }
+   
+   /* Button Styling */
+   button {
+     width: 100%;
+     padding: 15px;
+     background-color: #00bcd4; /* Bright Cyan */
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 1.2em;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+   
+   button:hover {
+     background-color: #ff5722; /* Bright Orange */
+     transform: translateY(-3px);
+   }
+   
+   button:active {
+     background-color: #ff3d00; /* Darker Orange */
+     transform: translateY(0);
+   }
+   
+   /* Responsive Design */
+   @media screen and (max-width: 768px) {
+     body {
+       padding: 20px;
+     }
+   
+     h1 {
+       font-size: 2.5em;
+     }
+   
+     form {
+       padding: 20px;
+     }
+   
+     input, textarea {
+       padding: 12px;
+       font-size: 1em;
+     }
+   
+     button {
+       font-size: 1.1em;
+     }
    }
    
